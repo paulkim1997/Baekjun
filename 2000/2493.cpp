@@ -17,7 +17,8 @@ int main(void){
         //건물 층수 입력 받기
         int height;
         cin >> height;
-
+           
+        //입력한 건물 push해주기 전에 스택에 있는 건물에서 해당 건물의 신호 받을 건물 있는지 
         //신호 못받는 건물 스택에 있으면 걸러주는 로직
         //스택에 뭐가 있지만, 스택에 있는 높이가 지금 높이보다 낮으면,
         //스택에 있는 건물이 신호 못받으니까 pop
@@ -30,7 +31,7 @@ int main(void){
         else //걸러주는 로직 거쳐도 있으면 해당 건물은 신호 잘 받음
             cout << stack.top().first << " ";
 
-        //뒤에 입력받은 건물 위해 PUSH해줌
+        //새로운 건물 push
         stack.push(make_pair(i,height));
     }
 
